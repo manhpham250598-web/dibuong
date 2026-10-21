@@ -1,0 +1,28 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Khoa Rối loạn nhịp tim - Hồ sơ bệnh nhân nội trú & buồng bệnh
+    match /patients/{patientId} {
+      allow read, write: if true;
+    }
+    
+    // Tác vụ & checklist điều dưỡng
+    match /ward_tasks/{taskId} {
+      allow read, write: if true;
+    }
+    
+    // Nhật ký diễn biến lâm sàng
+    match /ward_notes/{noteId} {
+      allow read, write: if true;
+    }
+
+    // Cấu hình chung và tài khoản
+    match /system/{docId} {
+      allow read, write: if true;
+    }
+    
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

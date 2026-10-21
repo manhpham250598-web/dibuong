@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/* Mobile Ergonomics & Fast Touch Response */
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+@media (max-width: 640px) {
+  /* Prevent iOS automatic input zooming while keeping crisp typography */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+.safe-bottom {
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 15mm 15mm 15mm 15mm;
+  }
+}
+
+@media screen {
+  .print-only {
+    display: none !important;
+  }
+}
+

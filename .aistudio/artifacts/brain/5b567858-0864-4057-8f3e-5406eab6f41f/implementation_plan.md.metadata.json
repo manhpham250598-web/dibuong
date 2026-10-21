@@ -1,0 +1,6 @@
+{
+  "summary":  "Kế hoạch triển khai đồng bộ dữ liệu thời gian thực lên Cloud Database (Firebase Firestore) để cho phép nhiều máy tính và thiết bị trong khoa cùng truy cập, tiếp nhận và điều trị bệnh nhân đồng thời, duy trì phân quyền tài khoản theo chức danh và cơ chế lưu trữ ngoại tuyến.",
+  "updatedAt":  "2026-10-21T01:23:32.299595454Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}
